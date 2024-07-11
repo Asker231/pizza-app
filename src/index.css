@@ -1,16 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 :root {
-  --font: 'Open Sans',sans-serif;
-  --white:#fff;
-  --primary:#FE724C;
-  --primary-hover:#fa5a2e;
-  --text-color:#99999A;
-  --divider:#D4D6E0;
-  --black:#000;
+    --font: "Open Sans", sans-serif;
+    --white: #fff;
+    --primary: #fe724c;
+    --primary-hover: #fa5a2e;
+    --text-color: #99999a;
+    --divider: #f1f1f1;
+
+    --black: #000;
 }
-body{
-  font-family: 'Open Sans',sans-serif;
+body {
+    font-family: "Open Sans", sans-serif;
 }
-*{
-  margin: 0;padding: 0;box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
