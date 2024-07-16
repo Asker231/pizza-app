@@ -23,19 +23,21 @@ function Home() {
             </header>
             <main >
                 {
-                products.map((el, ind) => {
-                    return (
-                        <Card
-                            key={ind}
-                            id={el.id}
-                            name={el.name}
-                            price={el.price}
-                            ingredients={el.ingredients}
-                            image={el.image}
-                            rating={el.rating} 
-                      />
-                    );
-                })}
+                    typeof products != ''
+                        products.map((el, ind) => {
+                            return (
+                                <Card
+                                    key={ind}
+                                    id={el.id}
+                                    name={el.name}
+                                    price={el.price}
+                                    ingredients={el.ingredients}
+                                    image={el.image}
+                                    rating={el.rating} 
+                              />
+                            );
+                        })
+                    }
             </main>
         </div>
     );
