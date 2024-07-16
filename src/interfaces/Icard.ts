@@ -5,4 +5,5 @@ export interface ICard {
     ingredients: string[];
     image: string;
     rating: number;
+
 }

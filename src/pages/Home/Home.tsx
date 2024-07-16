@@ -1,20 +1,17 @@
 import Card from "../../components/Card/Card";
 import style from "./home.module.css";
-
 import { ICard } from "../../interfaces/Icard";
-import { api } from "../../helper/api";
 import { useEffect, useState } from "react";
-import axios from "axios";
+import { useLoaderData } from "react-router-dom";
 
 function Home() {
-    const [products, setProduct] = useState<ICard[]>([]);
-    async function getData() {
-        const { data } = await axios(api.products);
-        setProduct(data);
-    }
-    useEffect(() => {
-        getData();
-    }, []);
+    const [products, setProduct] = useState<Array<ICard>|unknown>([]);
+    const data  = useLoaderData();
+
+
+    useEffect(()=>setProduct(data),[])
+
+
     return (
         <div className={style["home"]}>
             <header>
@@ -24,8 +21,9 @@ function Home() {
                     <input type="text" />
                 </div>
             </header>
-            <main>
-                {products.map((el, ind) => {
+            <main >
+                {
+                products.map((el, ind) => {
                     return (
                         <Card
                             key={ind}
@@ -34,8 +32,8 @@ function Home() {
                             price={el.price}
                             ingredients={el.ingredients}
                             image={el.image}
-                            rating={el.rating}
-                        />
+                            rating={el.rating} 
+                      />
                     );
                 })}
             </main>
