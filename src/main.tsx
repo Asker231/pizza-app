@@ -17,10 +17,9 @@ const route = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />,
-                loader:async():Promise<ICard>=>{
+                loader:async():Promise<ICard[]>=>{
                   const { data } = await axios(api.products);
-
-                    return data
+                  return data
                 }
             },
             {

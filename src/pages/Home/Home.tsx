@@ -5,13 +5,10 @@ import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 
 function Home() {
-    const [products, setProduct] = useState<Array<ICard>|unknown>([]);
-    const data  = useLoaderData();
-
+    const [products, setProduct] = useState<Array<ICard>>([]);
+    const data = useLoaderData();
 
     useEffect(()=>setProduct(data),[])
-
-
     return (
         <div className={style["home"]}>
             <header>
@@ -23,8 +20,7 @@ function Home() {
             </header>
             <main >
                 {
-                    typeof products != ''
-                        products.map((el, ind) => {
+                       products.map((el, ind) => {
                             return (
                                 <Card
                                     key={ind}
