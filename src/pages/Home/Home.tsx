@@ -6,7 +6,7 @@ import { useLoaderData } from "react-router-dom";
 
 function Home() {
     const [products, setProduct] = useState<Array<ICard>>([]);
-    const data = useLoaderData();
+    const data = useLoaderData() as ICard[];
 
     useEffect(()=>setProduct(data),[])
     return (
