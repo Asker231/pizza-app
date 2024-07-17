@@ -23,6 +23,7 @@ function Home() {
                        products.map((el, ind) => {
                             return (
                                 <Card
+                                    gridArea={el.id}
                                     key={ind}
                                     id={el.id}
                                     name={el.name}

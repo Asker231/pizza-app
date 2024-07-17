@@ -1,6 +1,4 @@
 .card {
-    width: 323px;
-    height: 247px;
     background-color: white;
     display: flex;
     flex-direction: column;
