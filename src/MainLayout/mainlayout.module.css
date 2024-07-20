@@ -1,6 +1,9 @@
 .mainlayout {
     display: flex;
     width: 100%;
+    .mobilebar{
+        display: none;
+    }
     .navbar {
         width: 220px;
         min-height: 100vh;
@@ -64,5 +67,49 @@
     .section {
         width: 100%;
         min-height: 100vh;
+    }
+ 
+}
+@media (max-width:426px) {
+    .mainlayout{
+        flex-direction: column-reverse;
+        position: relative;
+        .navbar{
+            display: none;
+        }
+        .mobilebar{
+            display: flex;
+            position: fixed;
+            background-color: var(--primary);
+            height: 80px;
+            border-top: 1px solid var(--divider);
+            align-items: center;
+            justify-content: space-around;
+            bottom: 0px;
+            width: 100%;
+            padding: 5px 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            z-index: 20;
+            a{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                text-decoration: none;
+                color: #9ea1b1;
+                font-size: 13px;
+                transition: .4s;
+            }
+            .border{
+                background-color: white;
+                border-radius: 5px;
+                img{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+        }
     }
 }

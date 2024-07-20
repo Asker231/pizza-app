@@ -11,12 +11,14 @@
     -moz-box-shadow: 1px 2px 13px -3px rgba(34, 60, 80, 0.2);
     box-shadow: 1px 2px 13px -3px rgba(34, 60, 80, 0.2);
     transition: .3s;
-    img {
-        border-radius: 10px;
-        width: 100%;
-        height: 100%;
-        object-fit: fit;
+    .image{
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 247px;
+            border-radius: 10px;
     }
+    
     .addCart {
         border: none;
         cursor: pointer;

@@ -25,7 +25,7 @@ function MainLayout() {
                     <div className={style["navButton"]}>
                         <Link
                             className={cn({
-                                [style["active"]]: location.pathname === "/",
+                                [style["active"]]: location.pathname === "/" ,
                             })}
                             to={"/"}>
                             {" "}
@@ -51,6 +51,12 @@ function MainLayout() {
                     </Button>
                 </div>
             </nav>
+            <div className={style["mobilebar"]}>
+                <Link className={cn({[style['border']]:location.pathname == '/'})} to={'/'}> <img src="/public/Home - 192x192.svg" alt="" /></Link>
+                <Link to={'/orders'} className={cn({[style['border']]:location.pathname == '/orders'})}> <img src="/public/Orders.svg" alt="" /></Link>
+                <Link to={'/basket'} className={cn({[style['border']]:location.pathname == '/basket'})}> <img src="/public/Shopping Bag - 192x192.svg" alt="" /></Link>
+                <Link to={'#'}> <img src="/public/Profile - 192x192.svg" alt="" /></Link>
+            </div>
             <section className={style["section"]}>
                 <Outlet />
             </section>

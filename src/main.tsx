@@ -11,6 +11,7 @@ import AuthLayout from "./AuthLayout/AuthLayout.tsx";
 import SignIn from "./pages/SignIn/SignIn.tsx";
 import SignUp from "./pages/SignUp/SignUp.tsx";
 import RequireAuth from "./helper/RequireAuth.tsx";
+import Product from "./pages/Product/Product.tsx";
 
 const Menu = lazy(()=>import('./pages/Home/Home'))
 const route = createBrowserRouter([
@@ -24,6 +25,15 @@ const route = createBrowserRouter([
                 loader:async():Promise<ICard[]>=>{
                   const { data } = await axios(api.products);
                   return data
+                }
+                
+            },
+            {
+                path:"/product/:id",
+                element:<Product/>,
+                loader:async({params})=>{
+                    const { data } = await axios(`${api.products}/${params.id}`);
+                    return data
                 }
             },
             {

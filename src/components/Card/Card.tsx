@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 import { ICard } from "../../interfaces/Icard";
 import style from "./card.module.css";
 
-function Card({ gridArea,...prop }: ICard) {
+function Card({...prop }: ICard) {
     return (
-        <Link style={{gridArea:`a${gridArea}`}} to={"#"} className={style["card"]}>
-            <img src={prop.image} alt="" />
+        <Link   to={`/product/${prop.id}`} className={style["card"]}>
+            <div style={{backgroundImage:`url('${prop.image}')`}} className={style["image"]}>
+            </div>
             <button className={style["addCart"]}>
                 <img src="/public/addcart-icon.svg" alt="" />
             </button>
