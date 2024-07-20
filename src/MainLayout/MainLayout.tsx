@@ -1,11 +1,18 @@
-import React from "react";
-import { Link, Outlet, useLocation } from "react-router-dom";
+
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import style from "./mainlayout.module.css";
 import Button from "../components/Button/Button";
 import cn from "classnames";
 
 function MainLayout() {
     const location = useLocation();
+    const navigate = useNavigate()
+
+    function Out(){
+        localStorage.removeItem('jwt')
+        navigate('/auth/signin')
+
+    }
     return (
         <div className={style["mainlayout"]}>
             <nav className={style["navbar"]}>
@@ -38,7 +45,7 @@ function MainLayout() {
                     </div>
                 </div>
                 <div className={style["bottom"]}>
-                    <Button className={style["outBtn"]}>
+                    <Button onClick={Out}  className={style["outBtn"]}>
                         <img src="/public/out-icon.svg" alt="" />
                         Выйти
                     </Button>

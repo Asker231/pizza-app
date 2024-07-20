@@ -1,0 +1,39 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items:center;
+    justify-content: center;
+
+    form{
+        width: 324px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: start;
+        .btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            width: 100%;
+            .loginbtn{
+            text-transform: uppercase;
+
+                font-size: 18px;
+            }
+        }
+
+    }
+    .bottom{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        a{
+            text-decoration: none;
+            color: var(--primary);
+        }
+    }
+
+}

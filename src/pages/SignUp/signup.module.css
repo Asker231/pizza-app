@@ -1,0 +1,39 @@
+.register{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items:center;
+    justify-content: center;
+
+    form{
+        width: 324px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: start;
+        .btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            width: 100%;
+            .loginbtn{
+                font-size: 18px;
+            text-transform: uppercase;
+
+            }
+        }
+
+    }
+    .bottom{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        a{
+            text-decoration: none;
+            color: var(--primary);
+        }
+    }
+
+}
