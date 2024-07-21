@@ -1,8 +1,9 @@
 
 import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import style from "./mainlayout.module.css";
-import Button from "../components/Button/Button";
+
 import cn from "classnames";
+import Button from "../../components/Button/Button";
 
 function MainLayout() {
     const location = useLocation();

@@ -6,7 +6,7 @@ function TextField({ lable, place ,...props}: TextFieldProps) {
         <div className={style["textfield"]}>
             <span>{lable}</span>
             <div className={style["wrapinput"]}>
-                <input {...props} placeholder={place} type="text" />
+                <input {...props} placeholder={place} />
             </div>
         </div>
     );
