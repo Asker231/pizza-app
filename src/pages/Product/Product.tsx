@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { Navigate, useLoaderData } from 'react-router-dom'
 import { ICard } from '../../interfaces/Icard'
 import style from './product.module.css'

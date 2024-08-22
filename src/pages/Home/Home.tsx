@@ -3,22 +3,37 @@ import style from "./home.module.css";
 import { ICard } from "../../interfaces/Icard";
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import gsap from "gsap";
+import cn from 'classnames'
 
 function Home() {
     const [products, setProduct] = useState<Array<ICard>>([]);
     const data = useLoaderData() as ICard[];
 
+    useEffect(()=>{
+        gsap.to('.main',{
+            opacity:1,
+            delay:0.5,
+          
+        })
+        gsap.to(".search",{
+            opacity:1,
+            delay:0.5,
+            y:10
+        })
+    },[])
+
     useEffect(()=>setProduct(data),[])
     return (
         <div className={style["home"]}>
-            <header>
+            <header className="search">
                 <h1>Меню</h1>
-                <div className={style["search"]}>
+                <div className={ cn(style["search"])}>
                     <img src="/public/search-icon.svg" alt="" />
                     <input type="text" />
                 </div>
             </header>
-            <main >
+            <main className="main">
                 {
                        products.map((el, ind) => {
                             return (
